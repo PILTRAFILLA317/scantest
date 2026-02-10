@@ -1,6 +1,5 @@
 import SwiftUI
 import StandardCyborgFusion
-import StandardCyborgUI
 
 struct ContentView: View {
   @StateObject private var store = ScanStore()
@@ -10,121 +9,130 @@ struct ContentView: View {
   @State private var showingShare = false
   @State private var previewURL: URL?
   @State private var showingPreview = false
+  @State private var isProcessing = false
 
   var body: some View {
     NavigationStack {
-      List {
-        if store.scans.isEmpty {
-          Text("No hay escaneos todavía.")
-            .foregroundStyle(.secondary)
-        } else {
-          ForEach(store.scans) { scan in
-            VStack(alignment: .leading, spacing: 4) {
-              Text(scan.url.lastPathComponent)
-                .font(.headline)
-              Text(scan.createdAt.formatted(date: .abbreviated, time: .shortened))
-                .font(.caption)
-                .foregroundStyle(.secondary)
-            }
-            .contentShape(Rectangle())
-            .onTapGesture {
-              previewURL = scan.url
-              showingPreview = true
-            }
-            .contextMenu {
-              Button("Ver") {
+      ZStack {
+        List {
+          if store.scans.isEmpty {
+            Text("No hay escaneos todavía.")
+              .foregroundStyle(.secondary)
+          } else {
+            ForEach(store.scans) { scan in
+              VStack(alignment: .leading, spacing: 4) {
+                Text(scan.url.lastPathComponent)
+                  .font(.headline)
+                Text(scan.createdAt.formatted(date: .abbreviated, time: .shortened))
+                  .font(.caption)
+                  .foregroundStyle(.secondary)
+              }
+              .contentShape(Rectangle())
+              .onTapGesture {
                 previewURL = scan.url
                 showingPreview = true
               }
-              Button("Compartir") {
-                shareURL = scan.url
-                showingShare = true
+              .contextMenu {
+                Button("Ver") {
+                  previewURL = scan.url
+                  showingPreview = true
+                }
+                Button("Compartir") {
+                  shareURL = scan.url
+                  showingShare = true
+                }
+                Button("Borrar", role: .destructive) {
+                  store.delete(scan)
+                }
               }
-              Button("Borrar", role: .destructive) {
-                store.delete(scan)
-              }
-            }
-            .swipeActions {
-              Button {
-                shareURL = scan.url
-                showingShare = true
-              } label: {
-                Text("Compartir")
-              }
-              .tint(.blue)
+              .swipeActions {
+                Button {
+                  shareURL = scan.url
+                  showingShare = true
+                } label: {
+                  Text("Compartir")
+                }
+                .tint(.blue)
 
-              Button(role: .destructive) {
-                store.delete(scan)
-              } label: {
-                Text("Borrar")
+                Button(role: .destructive) {
+                  store.delete(scan)
+                } label: {
+                  Text("Borrar")
+                }
               }
             }
           }
         }
-      }
-      .navigationTitle("Mis escaneos")
-      .toolbar {
-        Button("Nuevo escaneo") {
-          showingScanner = true
-        }
-      }
-      .onAppear {
-        store.reload()
-      }
-      .sheet(isPresented: $showingScanner) {
-        ScannerSheet(
-          onFinished: { pointCloud, scanningVC in
-            // Al terminar, vamos a:
-            // 1) Generar un SCScene (vía preview VC del SDK) y guardarlo.
-            // 2) Cerrar scanner.
-            // 3) Refrescar lista y opcionalmente abrir share.
-
-            saveResult(pointCloud: pointCloud, scanningVC: scanningVC)
-          },
-          onCanceled: {
-            showingScanner = false
+        .navigationTitle("Mis escaneos")
+        .toolbar {
+          Button("Nuevo escaneo") {
+            showingScanner = true
           }
-        )
-      }
-      .sheet(isPresented: $showingShare) {
-        if let shareURL {
-          ShareSheet(activityItems: [shareURL])
+          .disabled(isProcessing)
         }
-      }
-      .sheet(isPresented: $showingPreview) {
-        if let previewURL {
-          ScenePreviewSheet(sceneURL: previewURL)
+        .onAppear {
+          store.reload()
+        }
+        .sheet(isPresented: $showingScanner) {
+          ScannerSheet(
+            onFinished: { pointCloud, _ in
+              saveResult(pointCloud: pointCloud)
+            },
+            onCanceled: {
+              showingScanner = false
+            }
+          )
+        }
+        .sheet(isPresented: $showingShare) {
+          if let shareURL {
+            ShareSheet(activityItems: [shareURL])
+          }
+        }
+        .sheet(isPresented: $showingPreview) {
+          if let previewURL {
+            ScenePreviewSheet(sceneURL: previewURL)
+          }
+        }
+
+        // Processing overlay
+        if isProcessing {
+          Color.black.opacity(0.45)
+            .ignoresSafeArea()
+          VStack(spacing: 12) {
+            ProgressView()
+              .scaleEffect(1.3)
+            Text("Generando mesh…")
+              .font(.headline)
+          }
+          .padding(28)
+          .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 14))
         }
       }
     }
   }
 
-  @MainActor
-  private func saveResult(pointCloud: SCPointCloud, scanningVC: ScanningViewController) {
-    // Opción rápida: reutilizar el ScenePreviewViewController para obtener un SCScene.
-    let previewVC = ScenePreviewViewController(
-      pointCloud: pointCloud,
-      meshTexturing: scanningVC.meshTexturing,
-      landmarks: nil
-    )
+  // MARK: - Meshing pipeline
 
-    // Aquí está el punto CLAVE: exportar.
-    // En tu SDK, seguro existe writeToGLTF; OBJ hay que confirmar.
-    let fileBase = "scan_\(timestamp())"
-
-    let docsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let gltfURL = docsURL.appendingPathComponent("\(fileBase).gltf")
-
-    previewVC.scScene.writeToGLTF(atPath: gltfURL.path)
-
-    // Cerrar scanner sheet
+  private func saveResult(pointCloud: SCPointCloud) {
     showingScanner = false
+    isProcessing = true
 
-    store.reload()
+    let fileBase = "scan_\(timestamp())"
+    let docsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let objURL = docsURL.appendingPathComponent("\(fileBase).obj")
 
-    // Compartir automáticamente si quieres:
-    shareURL = gltfURL
-    showingShare = true
+    DispatchQueue.global(qos: .userInitiated).async {
+      let ok = MeshOBJExporter.buildAndExport(pointCloud: pointCloud, to: objURL)
+
+      DispatchQueue.main.async {
+        isProcessing = false
+        if ok {
+          store.reload()
+          shareURL = objURL
+          showingShare = true
+        }
+      }
+    }
   }
 
   private func timestamp() -> String {
