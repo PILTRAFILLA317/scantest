@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-ScanTest/Pods-ScanTest-frameworks.sh
+${BUILT_PRODUCTS_DIR}/StandardCyborgUI/StandardCyborgUI.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/StandardCyborgFusion/StandardCyborgFusion.framework/StandardCyborgFusion

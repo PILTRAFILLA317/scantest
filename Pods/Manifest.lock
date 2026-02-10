@@ -1,0 +1,21 @@
+PODS:
+  - StandardCyborgFusion (2.3.7)
+  - StandardCyborgUI (1.7.3):
+    - StandardCyborgFusion
+
+DEPENDENCIES:
+  - StandardCyborgFusion
+  - StandardCyborgUI
+
+SPEC REPOS:
+  trunk:
+    - StandardCyborgFusion
+    - StandardCyborgUI
+
+SPEC CHECKSUMS:
+  StandardCyborgFusion: fc11ae17f718c3fdfa10f056b7cc147fc3b2970c
+  StandardCyborgUI: 5a1efccc77f3f802bfa545945357cb2fbcbe56a9
+
+PODFILE CHECKSUM: 242aa611f2242ca93e786b8dbd7fc144f9041413
+
+COCOAPODS: 1.16.2

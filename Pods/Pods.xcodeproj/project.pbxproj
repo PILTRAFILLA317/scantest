@@ -1,0 +1,950 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		ED62BF4BD19D6CF455B84F70CE59DFD4 /* StandardCyborgFusion */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 194BB4882061A8ED62D6319F79654D21 /* Build configuration list for PBXAggregateTarget "StandardCyborgFusion" */;
+			buildPhases = (
+				D31778328643F2828EEE89C8F77690C0 /* [CP] Copy XCFrameworks */,
+			);
+			dependencies = (
+			);
+			name = StandardCyborgFusion;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		0716C6BBA8B4CF85D05E5755F2B8791A /* SCMetalSimulatorStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = ED48DA0F45CB6EBB9D1F4D0F9A5A12DB /* SCMetalSimulatorStubs.m */; };
+		1063462EE001D37D4F61189F022A8621 /* SCMeshingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16D4C3105B0199133E0DAC842319AF8 /* SCMeshingHelper.swift */; };
+		11E8E2767E451394B36F75B077425B1A /* ScenePreviewViewController.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9AAC2838DFE71153D3C20FD87140ADAC /* ScenePreviewViewController.scn */; };
+		19993A60A25E4FAD407623F2087A76F4 /* StandardCyborgUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D13A4A6774240DA4CAF4ADF96CDC2A2 /* StandardCyborgUI-dummy.m */; };
+		3FBBAEF58D44483E98F5530576C59CFC /* NodeToNodeLineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC9E29DCBEC17C82E38838BA7C6A29D /* NodeToNodeLineNode.swift */; };
+		44CE9DE53204000A077635180D37A3DA /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC60A4349B3AB555AA678F12091E69 /* CameraManager.swift */; };
+		45ED909466A625ADA41728BA2E417D65 /* Bundle+SCUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D02AC09ED928A8D2DDEB38A560746E /* Bundle+SCUI.swift */; };
+		4C818B93EED0C5E1532DBEB3D82CCA3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		5705071727DB78B158C19B1278AACBB4 /* ShutterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B932C2F189B290D62DEE30E0771A835D /* ShutterButton.swift */; };
+		5E42013C5C265A4BAB5179F55FB6ECFB /* SCMetalSimulatorStubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DF0961A59A932990EF31D0B46ADB182 /* SCMetalSimulatorStubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633E1512723C7D6ECE1E0EA7869BBE00 /* StandardCyborgUI.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B77DF7F220CACD20270138B3E2932F2 /* StandardCyborgUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		652B8C180D9621854C14936249AC2531 /* AspectFillTextureCommandEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278FEDCC4AE29481D789ACA6A8D90162 /* AspectFillTextureCommandEncoder.swift */; };
+		6A9C2D2383C0FF2E48D95256C2210C73 /* DefaultScanningViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60661FDC3FB13B06F1A86DDABB4595 /* DefaultScanningViewRenderer.swift */; };
+		7A6D554DD7F78F654CC208C8180798C7 /* Pods-ScanTest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E69ACF1A25EA973AB17691BF3F025AC /* Pods-ScanTest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D693BE82CD237B7D570552D411C5712 /* ScenePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F1FB26CB69285DB50AA6D85A5775A6E /* ScenePreviewViewController.swift */; };
+		963E758DB5FB9479914DABC1218B9A49 /* ScanningHapticFeedbackEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABDFE7A9693D6445D269CAA74B807137 /* ScanningHapticFeedbackEngine.swift */; };
+		98DF147701C452FF6103DCFAB347869E /* PointCloudCommandEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560D596846C02539E21050D32F8D14C /* PointCloudCommandEncoder.swift */; };
+		9DE403C57EE256AEDB4030851ABC3110 /* ScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 697B599CB646D7E2BB7470D51FFB6C10 /* ScanningViewController.swift */; };
+		A225CF0EFBD1B6E75C18D9241F339E5C /* ScanningViewRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08F3160D24DE3BC9A296AA59A9FF9976 /* ScanningViewRenderer.swift */; };
+		B121619DEC5E51189028737A4D2257C4 /* DrawColorTexture.metal in Resources */ = {isa = PBXBuildFile; fileRef = 09795D1B813B2437496D715001C3E2B0 /* DrawColorTexture.metal */; };
+		C7C2D23A245362FE063A8F6B8CBC87FD /* PointCloudCommandEncoder.metal in Resources */ = {isa = PBXBuildFile; fileRef = 57BF7EA945A5DC44D62A05174B181C5E /* PointCloudCommandEncoder.metal */; };
+		CBE23A97EF934DEF259209AE029D85D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		CD2DF0DF37802CC0EE0383D5DC86935E /* StandardCyborgUI-StandardCyborgUI in Resources */ = {isa = PBXBuildFile; fileRef = 10FC470D901780EFF007C776590FC137 /* StandardCyborgUI-StandardCyborgUI */; };
+		CE64403E1C5EC68DF6FA08B6ED9D6839 /* DrawColorTexture.metal in Sources */ = {isa = PBXBuildFile; fileRef = 09795D1B813B2437496D715001C3E2B0 /* DrawColorTexture.metal */; };
+		DA8BCE74401C326080F2977DEAAEE0D8 /* Pods-ScanTest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 39B84522F710C95EC7E720B4EEA7F69B /* Pods-ScanTest-dummy.m */; };
+		DDAE9AF60D5B154C1F29F3D494B2F29E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75F4238F34E87AFED6A5E7076DBBFE95 /* Assets.xcassets */; };
+		E10BB5B0410B007F49D53B9CB852E452 /* PointCloudCommandEncoder.metal in Sources */ = {isa = PBXBuildFile; fileRef = 57BF7EA945A5DC44D62A05174B181C5E /* PointCloudCommandEncoder.metal */; };
+		F13D0F7ABA71259E843523DF2143D49D /* StandardCyborgUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E96F922D1A948F012E66CD592CF0C6 /* StandardCyborgUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2AC766C6D67FB7FB1520D171A88F23A7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4036019A23A22D86395C32A65B71D1CA;
+			remoteInfo = StandardCyborgUI;
+		};
+		60A539B5366ED0A19DB34FBCA300A602 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED62BF4BD19D6CF455B84F70CE59DFD4;
+			remoteInfo = StandardCyborgFusion;
+		};
+		805FE086C6746860F2F14E2ACA1AAB65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED62BF4BD19D6CF455B84F70CE59DFD4;
+			remoteInfo = StandardCyborgFusion;
+		};
+		847D2A1ECCD6A86BAFD2448B95979DA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48EBE92C07CCE4C8E7F5660A33574FAA;
+			remoteInfo = "StandardCyborgUI-StandardCyborgUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04A7CA0C907FD40ECBFC3E02B62E24BB /* StandardCyborgUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "StandardCyborgUI-Info.plist"; sourceTree = "<group>"; };
+		0690DE04C9F1E338E4078A034FF0C436 /* Pods-ScanTest */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-ScanTest"; path = Pods_ScanTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		08F3160D24DE3BC9A296AA59A9FF9976 /* ScanningViewRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanningViewRenderer.swift; path = StandardCyborgUI/StandardCyborgUI/ScanningViewRenderer.swift; sourceTree = "<group>"; };
+		09795D1B813B2437496D715001C3E2B0 /* DrawColorTexture.metal */ = {isa = PBXFileReference; includeInIndex = 1; name = DrawColorTexture.metal; path = StandardCyborgUI/StandardCyborgUI/DrawColorTexture.metal; sourceTree = "<group>"; };
+		0A2CDE0ADF847976F6B5E48391DB00D9 /* StandardCyborgUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = StandardCyborgUI.modulemap; sourceTree = "<group>"; };
+		10FC470D901780EFF007C776590FC137 /* StandardCyborgUI-StandardCyborgUI */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "StandardCyborgUI-StandardCyborgUI"; path = StandardCyborgUI.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D7B9F92BC9240062669EADF4D8514B /* ResourceBundle-StandardCyborgUI-StandardCyborgUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-StandardCyborgUI-StandardCyborgUI-Info.plist"; sourceTree = "<group>"; };
+		2434C361E73AF2ED021957B07FB9AD1E /* Pods-ScanTest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ScanTest.modulemap"; sourceTree = "<group>"; };
+		278FEDCC4AE29481D789ACA6A8D90162 /* AspectFillTextureCommandEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AspectFillTextureCommandEncoder.swift; path = StandardCyborgUI/StandardCyborgUI/AspectFillTextureCommandEncoder.swift; sourceTree = "<group>"; };
+		2D80DEB00504AC64531168D0D3013786 /* StandardCyborgFusion.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StandardCyborgFusion.debug.xcconfig; sourceTree = "<group>"; };
+		2F1FB26CB69285DB50AA6D85A5775A6E /* ScenePreviewViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScenePreviewViewController.swift; path = StandardCyborgUI/StandardCyborgUI/ScenePreviewViewController.swift; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		391BAE8FFBA5EEC50B0184635332ED62 /* StandardCyborgFusion.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StandardCyborgFusion.release.xcconfig; sourceTree = "<group>"; };
+		39B84522F710C95EC7E720B4EEA7F69B /* Pods-ScanTest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ScanTest-dummy.m"; sourceTree = "<group>"; };
+		3E69ACF1A25EA973AB17691BF3F025AC /* Pods-ScanTest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ScanTest-umbrella.h"; sourceTree = "<group>"; };
+		43343B49A1AA54384A71257A329CDB29 /* Pods-ScanTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScanTest.debug.xcconfig"; sourceTree = "<group>"; };
+		466D53A622239DDAFF80E567CDEA5FD5 /* Pods-ScanTest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ScanTest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		47E96F922D1A948F012E66CD592CF0C6 /* StandardCyborgUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StandardCyborgUI-umbrella.h"; sourceTree = "<group>"; };
+		4B77DF7F220CACD20270138B3E2932F2 /* StandardCyborgUI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = StandardCyborgUI.h; path = StandardCyborgUI/StandardCyborgUI/StandardCyborgUI.h; sourceTree = "<group>"; };
+		578F3A60739DA43CAAFB984ED1E9ADAC /* StandardCyborgUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StandardCyborgUI.release.xcconfig; sourceTree = "<group>"; };
+		57BF7EA945A5DC44D62A05174B181C5E /* PointCloudCommandEncoder.metal */ = {isa = PBXFileReference; includeInIndex = 1; name = PointCloudCommandEncoder.metal; path = StandardCyborgUI/StandardCyborgUI/PointCloudCommandEncoder.metal; sourceTree = "<group>"; };
+		697B599CB646D7E2BB7470D51FFB6C10 /* ScanningViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanningViewController.swift; path = StandardCyborgUI/StandardCyborgUI/ScanningViewController.swift; sourceTree = "<group>"; };
+		73D02AC09ED928A8D2DDEB38A560746E /* Bundle+SCUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+SCUI.swift"; path = "StandardCyborgUI/StandardCyborgUI/Bundle+SCUI.swift"; sourceTree = "<group>"; };
+		75F4238F34E87AFED6A5E7076DBBFE95 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = StandardCyborgUI/StandardCyborgUI/Assets.xcassets; sourceTree = "<group>"; };
+		7A6EF47E4A94A3C1C012017550B50CDF /* StandardCyborgUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = StandardCyborgUI; path = StandardCyborgUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E73A412715B5C7E6A03772F4A9CB175 /* Pods-ScanTest-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScanTest-Info.plist"; sourceTree = "<group>"; };
+		8DF0961A59A932990EF31D0B46ADB182 /* SCMetalSimulatorStubs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SCMetalSimulatorStubs.h; path = StandardCyborgUI/StandardCyborgUI/SCMetalSimulatorStubs.h; sourceTree = "<group>"; };
+		9AAC2838DFE71153D3C20FD87140ADAC /* ScenePreviewViewController.scn */ = {isa = PBXFileReference; includeInIndex = 1; name = ScenePreviewViewController.scn; path = StandardCyborgUI/StandardCyborgUI/ScenePreviewViewController.scn; sourceTree = "<group>"; };
+		9D13A4A6774240DA4CAF4ADF96CDC2A2 /* StandardCyborgUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "StandardCyborgUI-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A2A3EB45F6551422ACCB1ED6EDA6BC63 /* Pods-ScanTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ScanTest.release.xcconfig"; sourceTree = "<group>"; };
+		ABDFE7A9693D6445D269CAA74B807137 /* ScanningHapticFeedbackEngine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScanningHapticFeedbackEngine.swift; path = StandardCyborgUI/StandardCyborgUI/ScanningHapticFeedbackEngine.swift; sourceTree = "<group>"; };
+		ADC9E29DCBEC17C82E38838BA7C6A29D /* NodeToNodeLineNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeToNodeLineNode.swift; path = StandardCyborgUI/StandardCyborgUI/NodeToNodeLineNode.swift; sourceTree = "<group>"; };
+		B44E334AF55D1313669ACD3D9CEA94FF /* StandardCyborgFusion.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = StandardCyborgFusion.xcframework; sourceTree = "<group>"; };
+		B932C2F189B290D62DEE30E0771A835D /* ShutterButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShutterButton.swift; path = StandardCyborgUI/StandardCyborgUI/ShutterButton.swift; sourceTree = "<group>"; };
+		C560D596846C02539E21050D32F8D14C /* PointCloudCommandEncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointCloudCommandEncoder.swift; path = StandardCyborgUI/StandardCyborgUI/PointCloudCommandEncoder.swift; sourceTree = "<group>"; };
+		CC60661FDC3FB13B06F1A86DDABB4595 /* DefaultScanningViewRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultScanningViewRenderer.swift; path = StandardCyborgUI/StandardCyborgUI/DefaultScanningViewRenderer.swift; sourceTree = "<group>"; };
+		CD0F4C786FF231713DC6988F84ED3143 /* StandardCyborgUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = StandardCyborgUI.debug.xcconfig; sourceTree = "<group>"; };
+		D7CC60A4349B3AB555AA678F12091E69 /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CameraManager.swift; path = StandardCyborgUI/StandardCyborgUI/CameraManager.swift; sourceTree = "<group>"; };
+		DED3393D1B5512E67FB28CDEC9615AE7 /* Pods-ScanTest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ScanTest-acknowledgements.plist"; sourceTree = "<group>"; };
+		E1BC90E683F19A6F532BC6CB6F2D9BAD /* Pods-ScanTest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ScanTest-frameworks.sh"; sourceTree = "<group>"; };
+		E6E50E8FD23C4ADE658F76645EBC337B /* StandardCyborgUI-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "StandardCyborgUI-prefix.pch"; sourceTree = "<group>"; };
+		E8E73C64B4A54DF8E7B781AADD36E8E4 /* StandardCyborgFusion-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "StandardCyborgFusion-xcframeworks.sh"; sourceTree = "<group>"; };
+		ED48DA0F45CB6EBB9D1F4D0F9A5A12DB /* SCMetalSimulatorStubs.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SCMetalSimulatorStubs.m; path = StandardCyborgUI/StandardCyborgUI/SCMetalSimulatorStubs.m; sourceTree = "<group>"; };
+		F16D4C3105B0199133E0DAC842319AF8 /* SCMeshingHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SCMeshingHelper.swift; path = StandardCyborgUI/StandardCyborgUI/SCMeshingHelper.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		038DD0BC6E70B01D7F0E58CDD9D5872D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C818B93EED0C5E1532DBEB3D82CCA3F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E82F1311658DD6EC51639D7C539DBC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8549C3FD6AB335BA85574A00D39C7360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE23A97EF934DEF259209AE029D85D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		094E6A921D3084D845F2D426F84BEE13 /* StandardCyborgUI */ = {
+			isa = PBXGroup;
+			children = (
+				278FEDCC4AE29481D789ACA6A8D90162 /* AspectFillTextureCommandEncoder.swift */,
+				73D02AC09ED928A8D2DDEB38A560746E /* Bundle+SCUI.swift */,
+				D7CC60A4349B3AB555AA678F12091E69 /* CameraManager.swift */,
+				CC60661FDC3FB13B06F1A86DDABB4595 /* DefaultScanningViewRenderer.swift */,
+				09795D1B813B2437496D715001C3E2B0 /* DrawColorTexture.metal */,
+				ADC9E29DCBEC17C82E38838BA7C6A29D /* NodeToNodeLineNode.swift */,
+				57BF7EA945A5DC44D62A05174B181C5E /* PointCloudCommandEncoder.metal */,
+				C560D596846C02539E21050D32F8D14C /* PointCloudCommandEncoder.swift */,
+				ABDFE7A9693D6445D269CAA74B807137 /* ScanningHapticFeedbackEngine.swift */,
+				697B599CB646D7E2BB7470D51FFB6C10 /* ScanningViewController.swift */,
+				08F3160D24DE3BC9A296AA59A9FF9976 /* ScanningViewRenderer.swift */,
+				2F1FB26CB69285DB50AA6D85A5775A6E /* ScenePreviewViewController.swift */,
+				F16D4C3105B0199133E0DAC842319AF8 /* SCMeshingHelper.swift */,
+				8DF0961A59A932990EF31D0B46ADB182 /* SCMetalSimulatorStubs.h */,
+				ED48DA0F45CB6EBB9D1F4D0F9A5A12DB /* SCMetalSimulatorStubs.m */,
+				B932C2F189B290D62DEE30E0771A835D /* ShutterButton.swift */,
+				4B77DF7F220CACD20270138B3E2932F2 /* StandardCyborgUI.h */,
+				82F723AB1C0B35F7E2A49E43CA8A7687 /* Resources */,
+				53901CDD7DE745B79A2101EBA4227768 /* Support Files */,
+			);
+			name = StandardCyborgUI;
+			path = StandardCyborgUI;
+			sourceTree = "<group>";
+		};
+		24688518761A054566F3DDD4CE44CE52 /* StandardCyborgFusion */ = {
+			isa = PBXGroup;
+			children = (
+				C0736791581F85F8233DBE9ADF5718CD /* Frameworks */,
+				A2AA39C757733F4D8DCE9C9A673C9FB7 /* Support Files */,
+			);
+			name = StandardCyborgFusion;
+			path = StandardCyborgFusion;
+			sourceTree = "<group>";
+		};
+		53901CDD7DE745B79A2101EBA4227768 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				18D7B9F92BC9240062669EADF4D8514B /* ResourceBundle-StandardCyborgUI-StandardCyborgUI-Info.plist */,
+				0A2CDE0ADF847976F6B5E48391DB00D9 /* StandardCyborgUI.modulemap */,
+				9D13A4A6774240DA4CAF4ADF96CDC2A2 /* StandardCyborgUI-dummy.m */,
+				04A7CA0C907FD40ECBFC3E02B62E24BB /* StandardCyborgUI-Info.plist */,
+				E6E50E8FD23C4ADE658F76645EBC337B /* StandardCyborgUI-prefix.pch */,
+				47E96F922D1A948F012E66CD592CF0C6 /* StandardCyborgUI-umbrella.h */,
+				CD0F4C786FF231713DC6988F84ED3143 /* StandardCyborgUI.debug.xcconfig */,
+				578F3A60739DA43CAAFB984ED1E9ADAC /* StandardCyborgUI.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StandardCyborgUI";
+			sourceTree = "<group>";
+		};
+		5FA95973870B3FD2F5E5661081F023B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0690DE04C9F1E338E4078A034FF0C436 /* Pods-ScanTest */,
+				7A6EF47E4A94A3C1C012017550B50CDF /* StandardCyborgUI */,
+				10FC470D901780EFF007C776590FC137 /* StandardCyborgUI-StandardCyborgUI */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		82F723AB1C0B35F7E2A49E43CA8A7687 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75F4238F34E87AFED6A5E7076DBBFE95 /* Assets.xcassets */,
+				9AAC2838DFE71153D3C20FD87140ADAC /* ScenePreviewViewController.scn */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		A2AA39C757733F4D8DCE9C9A673C9FB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E8E73C64B4A54DF8E7B781AADD36E8E4 /* StandardCyborgFusion-xcframeworks.sh */,
+				2D80DEB00504AC64531168D0D3013786 /* StandardCyborgFusion.debug.xcconfig */,
+				391BAE8FFBA5EEC50B0184635332ED62 /* StandardCyborgFusion.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/StandardCyborgFusion";
+			sourceTree = "<group>";
+		};
+		A947BF07324D030606604F4732A9C682 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24688518761A054566F3DDD4CE44CE52 /* StandardCyborgFusion */,
+				094E6A921D3084D845F2D426F84BEE13 /* StandardCyborgUI */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C0736791581F85F8233DBE9ADF5718CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B44E334AF55D1313669ACD3D9CEA94FF /* StandardCyborgFusion.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C85AB01BA8DB9399490E7C0EECC80372 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6E7F41264B30680120DA96021437894 /* Pods-ScanTest */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				A947BF07324D030606604F4732A9C682 /* Pods */,
+				5FA95973870B3FD2F5E5661081F023B5 /* Products */,
+				C85AB01BA8DB9399490E7C0EECC80372 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F6E7F41264B30680120DA96021437894 /* Pods-ScanTest */ = {
+			isa = PBXGroup;
+			children = (
+				2434C361E73AF2ED021957B07FB9AD1E /* Pods-ScanTest.modulemap */,
+				466D53A622239DDAFF80E567CDEA5FD5 /* Pods-ScanTest-acknowledgements.markdown */,
+				DED3393D1B5512E67FB28CDEC9615AE7 /* Pods-ScanTest-acknowledgements.plist */,
+				39B84522F710C95EC7E720B4EEA7F69B /* Pods-ScanTest-dummy.m */,
+				E1BC90E683F19A6F532BC6CB6F2D9BAD /* Pods-ScanTest-frameworks.sh */,
+				7E73A412715B5C7E6A03772F4A9CB175 /* Pods-ScanTest-Info.plist */,
+				3E69ACF1A25EA973AB17691BF3F025AC /* Pods-ScanTest-umbrella.h */,
+				43343B49A1AA54384A71257A329CDB29 /* Pods-ScanTest.debug.xcconfig */,
+				A2A3EB45F6551422ACCB1ED6EDA6BC63 /* Pods-ScanTest.release.xcconfig */,
+			);
+			name = "Pods-ScanTest";
+			path = "Target Support Files/Pods-ScanTest";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6A9995312ACFB3772A6146CFEB13324B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A6D554DD7F78F654CC208C8180798C7 /* Pods-ScanTest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98FC893025E90537727B9003A929BEBF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E42013C5C265A4BAB5179F55FB6ECFB /* SCMetalSimulatorStubs.h in Headers */,
+				633E1512723C7D6ECE1E0EA7869BBE00 /* StandardCyborgUI.h in Headers */,
+				F13D0F7ABA71259E843523DF2143D49D /* StandardCyborgUI-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		4036019A23A22D86395C32A65B71D1CA /* StandardCyborgUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8509363F4983F02AB652EC2B41C5B8A /* Build configuration list for PBXNativeTarget "StandardCyborgUI" */;
+			buildPhases = (
+				98FC893025E90537727B9003A929BEBF /* Headers */,
+				98EB6CEA9C5DE368FDF53CAE9A5E1149 /* Sources */,
+				8549C3FD6AB335BA85574A00D39C7360 /* Frameworks */,
+				B85C871254F5AE87D1BC47AEA5D9E884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B20016A6695B505D76866003E53F806D /* PBXTargetDependency */,
+				C91C3366F522D8DE08B1DD67C4E1BD67 /* PBXTargetDependency */,
+			);
+			name = StandardCyborgUI;
+			productName = StandardCyborgUI;
+			productReference = 7A6EF47E4A94A3C1C012017550B50CDF /* StandardCyborgUI */;
+			productType = "com.apple.product-type.framework";
+		};
+		48EBE92C07CCE4C8E7F5660A33574FAA /* StandardCyborgUI-StandardCyborgUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0F6FB8F680AB0123E48CE3FB42EF0A4 /* Build configuration list for PBXNativeTarget "StandardCyborgUI-StandardCyborgUI" */;
+			buildPhases = (
+				49F4CDCD895CACCC9A1045F2A7593E21 /* Sources */,
+				3E82F1311658DD6EC51639D7C539DBC3 /* Frameworks */,
+				1F1F0E9AF8DB3C9E08D582437DA7DB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "StandardCyborgUI-StandardCyborgUI";
+			productName = StandardCyborgUI;
+			productReference = 10FC470D901780EFF007C776590FC137 /* StandardCyborgUI-StandardCyborgUI */;
+			productType = "com.apple.product-type.bundle";
+		};
+		85D34FBB292808C64A78CCCB3196EE48 /* Pods-ScanTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A978540469D5B71B317EED6E6A34D8B8 /* Build configuration list for PBXNativeTarget "Pods-ScanTest" */;
+			buildPhases = (
+				6A9995312ACFB3772A6146CFEB13324B /* Headers */,
+				EFD1A40471FB9A4F5EAD2C0787E2D91A /* Sources */,
+				038DD0BC6E70B01D7F0E58CDD9D5872D /* Frameworks */,
+				54D5758B1CBA74E0F559B104AB69675A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7403C4603A33E000C2BDE72D0CDB60CC /* PBXTargetDependency */,
+				0B7F76803CA2EB4FEE51B53AD599BA85 /* PBXTargetDependency */,
+			);
+			name = "Pods-ScanTest";
+			productName = Pods_ScanTest;
+			productReference = 0690DE04C9F1E338E4078A034FF0C436 /* Pods-ScanTest */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 5FA95973870B3FD2F5E5661081F023B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85D34FBB292808C64A78CCCB3196EE48 /* Pods-ScanTest */,
+				ED62BF4BD19D6CF455B84F70CE59DFD4 /* StandardCyborgFusion */,
+				4036019A23A22D86395C32A65B71D1CA /* StandardCyborgUI */,
+				48EBE92C07CCE4C8E7F5660A33574FAA /* StandardCyborgUI-StandardCyborgUI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F1F0E9AF8DB3C9E08D582437DA7DB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAE9AF60D5B154C1F29F3D494B2F29E /* Assets.xcassets in Resources */,
+				B121619DEC5E51189028737A4D2257C4 /* DrawColorTexture.metal in Resources */,
+				C7C2D23A245362FE063A8F6B8CBC87FD /* PointCloudCommandEncoder.metal in Resources */,
+				11E8E2767E451394B36F75B077425B1A /* ScenePreviewViewController.scn in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54D5758B1CBA74E0F559B104AB69675A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B85C871254F5AE87D1BC47AEA5D9E884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD2DF0DF37802CC0EE0383D5DC86935E /* StandardCyborgUI-StandardCyborgUI in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D31778328643F2828EEE89C8F77690C0 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/StandardCyborgFusion/StandardCyborgFusion-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/StandardCyborgFusion/StandardCyborgFusion-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/StandardCyborgFusion/StandardCyborgFusion-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49F4CDCD895CACCC9A1045F2A7593E21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98EB6CEA9C5DE368FDF53CAE9A5E1149 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				652B8C180D9621854C14936249AC2531 /* AspectFillTextureCommandEncoder.swift in Sources */,
+				45ED909466A625ADA41728BA2E417D65 /* Bundle+SCUI.swift in Sources */,
+				44CE9DE53204000A077635180D37A3DA /* CameraManager.swift in Sources */,
+				6A9C2D2383C0FF2E48D95256C2210C73 /* DefaultScanningViewRenderer.swift in Sources */,
+				CE64403E1C5EC68DF6FA08B6ED9D6839 /* DrawColorTexture.metal in Sources */,
+				3FBBAEF58D44483E98F5530576C59CFC /* NodeToNodeLineNode.swift in Sources */,
+				E10BB5B0410B007F49D53B9CB852E452 /* PointCloudCommandEncoder.metal in Sources */,
+				98DF147701C452FF6103DCFAB347869E /* PointCloudCommandEncoder.swift in Sources */,
+				963E758DB5FB9479914DABC1218B9A49 /* ScanningHapticFeedbackEngine.swift in Sources */,
+				9DE403C57EE256AEDB4030851ABC3110 /* ScanningViewController.swift in Sources */,
+				A225CF0EFBD1B6E75C18D9241F339E5C /* ScanningViewRenderer.swift in Sources */,
+				7D693BE82CD237B7D570552D411C5712 /* ScenePreviewViewController.swift in Sources */,
+				1063462EE001D37D4F61189F022A8621 /* SCMeshingHelper.swift in Sources */,
+				0716C6BBA8B4CF85D05E5755F2B8791A /* SCMetalSimulatorStubs.m in Sources */,
+				5705071727DB78B158C19B1278AACBB4 /* ShutterButton.swift in Sources */,
+				19993A60A25E4FAD407623F2087A76F4 /* StandardCyborgUI-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFD1A40471FB9A4F5EAD2C0787E2D91A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8BCE74401C326080F2977DEAAEE0D8 /* Pods-ScanTest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0B7F76803CA2EB4FEE51B53AD599BA85 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StandardCyborgUI;
+			target = 4036019A23A22D86395C32A65B71D1CA /* StandardCyborgUI */;
+			targetProxy = 2AC766C6D67FB7FB1520D171A88F23A7 /* PBXContainerItemProxy */;
+		};
+		7403C4603A33E000C2BDE72D0CDB60CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StandardCyborgFusion;
+			target = ED62BF4BD19D6CF455B84F70CE59DFD4 /* StandardCyborgFusion */;
+			targetProxy = 60A539B5366ED0A19DB34FBCA300A602 /* PBXContainerItemProxy */;
+		};
+		B20016A6695B505D76866003E53F806D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = StandardCyborgFusion;
+			target = ED62BF4BD19D6CF455B84F70CE59DFD4 /* StandardCyborgFusion */;
+			targetProxy = 805FE086C6746860F2F14E2ACA1AAB65 /* PBXContainerItemProxy */;
+		};
+		C91C3366F522D8DE08B1DD67C4E1BD67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "StandardCyborgUI-StandardCyborgUI";
+			target = 48EBE92C07CCE4C8E7F5660A33574FAA /* StandardCyborgUI-StandardCyborgUI */;
+			targetProxy = 847D2A1ECCD6A86BAFD2448B95979DA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00EA18AF3CD7F8F33CA193FF6496097B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0F4C786FF231713DC6988F84ED3143 /* StandardCyborgUI.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/StandardCyborgUI/StandardCyborgUI-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/StandardCyborgUI/StandardCyborgUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/StandardCyborgUI/StandardCyborgUI.modulemap";
+				PRODUCT_MODULE_NAME = StandardCyborgUI;
+				PRODUCT_NAME = StandardCyborgUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0C33C6D25905B53EB7E5F3FF9D0BA8F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CD0F4C786FF231713DC6988F84ED3143 /* StandardCyborgUI.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StandardCyborgUI";
+				IBSC_MODULE = StandardCyborgUI;
+				INFOPLIST_FILE = "Target Support Files/StandardCyborgUI/ResourceBundle-StandardCyborgUI-StandardCyborgUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = StandardCyborgUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3E52C24CBB8469BC2EF4CB2DEDA34368 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391BAE8FFBA5EEC50B0184635332ED62 /* StandardCyborgFusion.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		42A1526A039089639CA5B332A0B324E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578F3A60739DA43CAAFB984ED1E9ADAC /* StandardCyborgUI.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_PREFIX_HEADER = "Target Support Files/StandardCyborgUI/StandardCyborgUI-prefix.pch";
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "Target Support Files/StandardCyborgUI/StandardCyborgUI-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/StandardCyborgUI/StandardCyborgUI.modulemap";
+				PRODUCT_MODULE_NAME = StandardCyborgUI;
+				PRODUCT_NAME = StandardCyborgUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E5166E454E41CD483D54C6B4B06FBEBF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 578F3A60739DA43CAAFB984ED1E9ADAC /* StandardCyborgUI.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGNING_ALLOWED = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/StandardCyborgUI";
+				IBSC_MODULE = StandardCyborgUI;
+				INFOPLIST_FILE = "Target Support Files/StandardCyborgUI/ResourceBundle-StandardCyborgUI-StandardCyborgUI-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				PRODUCT_NAME = StandardCyborgUI;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		E873CA97BD124B21839AF13C9BE1CD18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		EE487918BD03066117CEB87D73C67CB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43343B49A1AA54384A71257A329CDB29 /* Pods-ScanTest.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-ScanTest/Pods-ScanTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScanTest/Pods-ScanTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F194BC5419668A35A91FA0A4B4DC1398 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2A3EB45F6551422ACCB1ED6EDA6BC63 /* Pods-ScanTest.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-ScanTest/Pods-ScanTest-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ScanTest/Pods-ScanTest.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F47EB489A4D54A6C72B07D929913DC25 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D80DEB00504AC64531168D0D3013786 /* StandardCyborgFusion.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		194BB4882061A8ED62D6319F79654D21 /* Build configuration list for PBXAggregateTarget "StandardCyborgFusion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F47EB489A4D54A6C72B07D929913DC25 /* Debug */,
+				3E52C24CBB8469BC2EF4CB2DEDA34368 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A5C026ED62BBFE3380CD257EEFAEB20 /* Debug */,
+				E873CA97BD124B21839AF13C9BE1CD18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0F6FB8F680AB0123E48CE3FB42EF0A4 /* Build configuration list for PBXNativeTarget "StandardCyborgUI-StandardCyborgUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C33C6D25905B53EB7E5F3FF9D0BA8F1 /* Debug */,
+				E5166E454E41CD483D54C6B4B06FBEBF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A978540469D5B71B317EED6E6A34D8B8 /* Build configuration list for PBXNativeTarget "Pods-ScanTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE487918BD03066117CEB87D73C67CB1 /* Debug */,
+				F194BC5419668A35A91FA0A4B4DC1398 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8509363F4983F02AB652EC2B41C5B8A /* Build configuration list for PBXNativeTarget "StandardCyborgUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00EA18AF3CD7F8F33CA193FF6496097B /* Debug */,
+				42A1526A039089639CA5B332A0B324E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
