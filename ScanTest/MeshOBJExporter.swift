@@ -25,12 +25,13 @@ enum MeshOBJExporter {
     }
 
     // 2. Poisson surface reconstruction (local, no API key)
+    //    Tuned for plantar insole scanning: clean surface, few polygons.
     let meshOp = SCMeshingOperation(inputPLYPath: inputPLY.path, outputPLYPath: outputPLY.path)
     let params = SCMeshingParameters()
-    params.resolution = 7
-    params.smoothness = 3
-    params.surfaceTrimmingAmount = 5
-    params.closed = true
+    params.resolution = 10            // 1-10: balance between detail and file size
+    params.smoothness = 1            // 1-10: moderate smoothing, keeps arch shape
+    params.surfaceTrimmingAmount = 8 // 0-10: high = elimina geometria inventada en zonas sin datos
+    params.closed = false            // open mesh – only the plantar surface matters
     meshOp.parameters = params
     meshOp.start()
 

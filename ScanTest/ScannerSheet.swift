@@ -13,15 +13,17 @@ private class DepthLimitedScanningVC: ScanningViewController {
   var scanMaxDepth: Float = 0.30
 
   override func viewDidLoad() {
-    super.viewDidLoad() // initializes the lazy _reconstructionManager
+    super.viewDidLoad()
 
     guard let manager = findReconstructionManager() else {
       print("[ScannerSheet] Could not find SCReconstructionManager – depth limits not applied")
       return
     }
-    manager.minDepth = 0.15
+    // Plantar scan: iPhone 15-30cm above the sole.
+    // Tight range rejects background/floor noise.
+    manager.minDepth = 0.10
     manager.maxDepth = scanMaxDepth
-    print("[ScannerSheet] Depth limits: 0.15 – \(scanMaxDepth) m")
+    print("[ScannerSheet] Depth limits: 0.10 – \(scanMaxDepth) m")
   }
 
   /// Walks the Mirror superclass chain to find the private _reconstructionManager.
@@ -51,11 +53,8 @@ private class DepthLimitedScanningVC: ScanningViewController {
 
 struct ScannerSheet: UIViewControllerRepresentable {
 
-  /// Maximum scan distance in meters (default 0.80 m = 80 cm).
-  /// Typical values:
-  ///  - Face/small object:  0.50
-  ///  - Bust/torso:         0.80
-  ///  - Medium object:      1.20
+  /// Maximum scan distance in meters.
+  /// Foot scanning: iPhone held 20-30cm above the foot.
   var maxDepth: Float = 0.30
 
   let onFinished: (SCPointCloud, ScanningViewController) -> Void
@@ -91,6 +90,8 @@ struct ScannerSheet: UIViewControllerRepresentable {
     scanningVC.scanMaxDepth = maxDepth
     scanningVC.delegate = context.coordinator
     scanningVC.generatesTexturedMeshes = false
+    scanningVC.maxDepthResolution = 320
+    scanningVC.countdownStartCount = 3
     scanningVC.modalPresentationStyle = .fullScreen
     return scanningVC
   }
