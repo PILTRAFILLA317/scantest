@@ -1,5 +1,7 @@
 import SwiftUI
 import SceneKit
+import SceneKit.ModelIO
+import ModelIO
 import StandardCyborgFusion
 import StandardCyborgUI
 import UIKit
@@ -8,8 +10,9 @@ struct ScenePreviewSheet: UIViewControllerRepresentable {
   let sceneURL: URL
 
   func makeUIViewController(context: Context) -> UIViewController {
-    if sceneURL.pathExtension.lowercased() == "obj" {
-      return makeOBJPreview(context: context)
+    let ext = sceneURL.pathExtension.lowercased()
+    if ext == "obj" || ext == "ply" {
+      return makeSceneKitPreview(context: context)
     } else {
       return makeGLTFPreview(context: context)
     }
@@ -21,24 +24,23 @@ struct ScenePreviewSheet: UIViewControllerRepresentable {
     Coordinator()
   }
 
-  // MARK: - OBJ mesh preview (SceneKit native loader)
+  // MARK: - OBJ / PLY mesh preview (ModelIO + SceneKit)
 
-  private func makeOBJPreview(context: Context) -> UIViewController {
-    let scnScene: SCNScene
-    do {
-      scnScene = try SCNScene(url: sceneURL)
-    } catch {
-      print("[ScenePreviewSheet] Failed to load OBJ: \(error)")
-      scnScene = SCNScene()
-    }
+  private func makeSceneKitPreview(context: Context) -> UIViewController {
+    let mdlAsset = MDLAsset(url: sceneURL)
+    mdlAsset.loadTextures()
+    let scnScene = SCNScene(mdlAsset: mdlAsset)
 
-    // Force white material on all geometry
+    // Strip vertex colors and force white material
+    let whiteMat = SCNMaterial()
+    whiteMat.diffuse.contents = UIColor.white
+    whiteMat.lightingModel = .physicallyBased
     scnScene.rootNode.enumerateChildNodes { node, _ in
       if let geo = node.geometry {
-        let mat = SCNMaterial()
-        mat.diffuse.contents = UIColor.white
-        mat.lightingModel = .physicallyBased
-        geo.materials = [mat]
+        let sources = geo.sources.filter { $0.semantic != .color }
+        let newGeo = SCNGeometry(sources: sources, elements: geo.elements)
+        newGeo.materials = [whiteMat]
+        node.geometry = newGeo
       }
     }
 

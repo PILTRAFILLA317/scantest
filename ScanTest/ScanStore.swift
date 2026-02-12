@@ -23,7 +23,8 @@ final class ScanStore: ObservableObject {
       options: [.skipsHiddenFiles]
     )) ?? []
 
-    let scanURLs = urls.filter { $0.pathExtension.lowercased() == "obj" || $0.pathExtension.lowercased() == "gltf" }
+    let allowed: Set<String> = ["obj", "gltf", "ply"]
+    let scanURLs = urls.filter { allowed.contains($0.pathExtension.lowercased()) }
 
     let files: [ScanFile] = scanURLs.compactMap { url in
       let values = try? url.resourceValues(forKeys: [.creationDateKey])

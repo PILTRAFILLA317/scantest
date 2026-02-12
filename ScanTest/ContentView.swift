@@ -119,16 +119,16 @@ struct ContentView: View {
 
     let fileBase = "scan_\(timestamp())"
     let docsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    let objURL = docsURL.appendingPathComponent("\(fileBase).obj")
+    let plyURL = docsURL.appendingPathComponent("\(fileBase).ply")
 
     DispatchQueue.global(qos: .userInitiated).async {
-      let ok = MeshOBJExporter.buildAndExport(pointCloud: pointCloud, to: objURL)
+      let ok = MeshExporter.buildAndExport(pointCloud: pointCloud, to: plyURL)
 
       DispatchQueue.main.async {
         isProcessing = false
         if ok {
           store.reload()
-          shareURL = objURL
+          shareURL = plyURL
           showingShare = true
         }
       }
