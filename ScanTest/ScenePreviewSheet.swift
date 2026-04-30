@@ -35,6 +35,7 @@ struct ScenePreviewSheet: UIViewControllerRepresentable {
     let whiteMat = SCNMaterial()
     whiteMat.diffuse.contents = UIColor.white
     whiteMat.lightingModel = .physicallyBased
+    whiteMat.isDoubleSided = true
     scnScene.rootNode.enumerateChildNodes { node, _ in
       if let geo = node.geometry {
         let sources = geo.sources.filter { $0.semantic != .color }
